@@ -1,0 +1,4 @@
+#projects .displaycontent{
+    display: none;
+    transition: 0.2s ease;
+}

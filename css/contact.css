@@ -1,0 +1,5 @@
+.query .querysection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

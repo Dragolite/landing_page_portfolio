@@ -1,0 +1,234 @@
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#who{
+    margin-top: 30px;
+}
+hr{
+    width: 400px;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#who .container{
+    align-content: center;
+    margin-top: 20px;
+}
+#who .container .header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.container p{
+    max-width: 700px;
+    margin: 10px auto;
+    color:rgba(17,17,17,0.9) ;
+    padding: 20px;
+}
+
+#who .container .items{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 90%;
+    margin: 5%;
+} 
+
+#who .container .items .item{
+    display: flex;
+    margin: 30px 0;
+}
+
+#who .container .items .item .content h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: crimson;
+    text-transform: capitalize;
+}
+#who .container .items .item .content p{
+    color:rgba(17,17,17,0.9) ;
+    line-height: 2.9rem;
+}
+#who .container .items .item img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+/* timeline */
+
+        #timeline{
+            background-color:rgba(50, 168, 82, 0.3) ;
+            margin: 100px;
+            padding: 50px;
+            border-radius: 10px;
+
+        }
+        #timeline .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* The actual timeline (the vertical ruler) */
+        #timeline .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color:crimson ;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        /* Container around content */
+        #timeline .container-timeline {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        /* The circles on the timeline */
+        #timeline .container-timeline::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid crimson;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        #timeline .container-timeline h2{
+            font-size: 30px;
+            font-weight: 300;
+        }
+        /* Place the container to the left */
+        #timeline .container-timeline:nth-of-type(odd) {
+            left: 0;
+        }
+        
+        /* Place the container to the right */
+        #timeline .container-timeline:nth-of-type(even) {
+            left: 50%;
+        }
+        
+        /* Add arrows to the left container (pointing right) */
+        #timeline .container-timeline:nth-of-type(odd)::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        /* Add arrows to the right container (pointing left) */
+        #timeline .container-timeline:nth-of-type(even)::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        /* Fix the circle for containers on the right side */
+        #timeline .container-timeline:nth-of-type(even)::after {
+            left: -16px;
+        }
+        
+        /* The actual content */
+        #timeline .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 1200px) {
+            #timeline{
+                background-color:rgba(50, 168, 82, 0.3) ;
+                margin: 100px 0;
+                padding: 50px 0;
+            
+            }
+        /* Place the timelime to the left */
+            #timeline .timeline::after {
+            left: 31px;
+            }
+        
+        /* Full-width containers */
+        #timeline .container-timeline {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+            }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        #timeline .container-timeline:nth-of-type(odd)::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            }
+
+        #timeline .container-timeline:nth-of-type(even)::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            }
+        
+        /* Make sure all circles are at the same spot */
+        #timeline  .container-timeline:nth-of-type(odd)::after{
+            left: 15px;
+            }
+            #timeline  .container-timeline:nth-of-type(even)::after{
+                left: 15px;
+            }
+        /* Make all right containers behave like the left ones */
+        #timeline .container-timeline:nth-of-type(even) {
+            left: 0%;
+            }
+        }
+
+  @media only screen and (min-width: 768px) {
+    #who .container .item{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        margin: 0 2.5%;
+    } 
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    #who .container .items{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 90%;
+        margin: 0 2.5%;
+    } 
+  }
